@@ -1,0 +1,52 @@
+source 'https://rubygems.org'
+
+
+# Use Capistrano for deployment
+# gem 'capistrano', group: :development
+
+
+gem 'therubyracer', platforms: :ruby  # See https://github.com/sstephenson/execjs#readme for more supported ruby_platformntimes
+gem "less-rails" #Sprockets (what Rails 3.1 uses for its asset pipeline) supports LESS
+#gem "twitter-bootstrap-rails"
+gem 'jquery-rails'
+gem 'turbolinks'
+gem 'jbuilder', '~> 1.2'# Build JSON APIs with ease. Read more: https://github.com/rails/jbuilder
+gem 'rails', '4.0.2'
+gem 'bcrypt-ruby', '~> 3.1.2'# Use ActiveModel has_secure_password
+gem 'unicorn'# Use unicorn as the app server
+gem 'thin'
+gem 'devise'
+gem 'cancan'
+gem 'rolify'
+
+group :test, :development do
+  gem 'debugger'
+  gem 'sqlite3'
+  gem 'rspec-rails'
+  gem 'ZenTest'
+  gem 'autotest'
+  gem 'pry'
+  gem 'factory_girl_rails'
+  gem 'database_cleaner'
+  gem 'awesome_print'
+  gem 'cucumber-rails', :require => false
+  gem 'cucumber'
+  gem 'capybara'
+  gem 'rb-fsevent', :require => false if RUBY_PLATFORM =~ /darwin/i
+  gem 'guard-rspec'
+  gem 'spork', :github => 'sporkrb/spork'
+  gem 'spork-rails', :github => 'sporkrb/spork-rails'
+  gem 'guard-spork'
+end
+
+group :assets do
+  gem 'sass-rails', '~> 4.0.0'
+  gem 'uglifier', '>= 1.3.0'
+  gem 'coffee-rails', '~> 4.0.0'
+end
+
+group :doc do
+  # bundle exec rake doc:rails generates the API under doc/api.
+  gem 'sdoc', require: false
+end
+

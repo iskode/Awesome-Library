@@ -1,0 +1,52 @@
+/*
+ * This is a manifest file that'll be compiled into application.css, which will include all the files
+ * listed below.
+ *
+ * Any CSS and SCSS file within this directory, lib/assets/stylesheets, vendor/assets/stylesheets,
+ * or vendor/assets/stylesheets of plugins, if any, can be referenced here using a relative path.
+ *
+ * You're free to add application-wide styles to this file and they'll appear at the top of the
+ * compiled file, but it's generally better to create a new file per style scope.
+ *
+ *= require_self
+ *= require bootstrap.min
+ *= require_tree .
+ *
+ */
+
+
+.container {
+    width:970px;
+}
+
+@media (min-width: 768px) {
+    .navbar .navbar-nav {
+
+        display: inline-block;
+        float: none;
+    }
+
+    h1{
+        font-style:italic;
+        text-align: center;
+    }
+
+
+    nav{
+        height: 200px;
+        background-image:url("thu-vien.jpg") ;
+        text-emphasis-color: red;
+    }
+
+    .modal-footer  {
+        background-color: #999999
+    }
+    .navbar-inverse  {
+        margin-top: 110px;
+        border-radius: 1em;
+
+        text-align: center;
+    }
+
+}
+

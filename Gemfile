@@ -4,14 +4,14 @@ source 'https://rubygems.org'
 # Use Capistrano for deployment
 # gem 'capistrano', group: :development
 
-
 gem 'therubyracer', platforms: :ruby  # See https://github.com/sstephenson/execjs#readme for more supported ruby_platformntimes
 gem "less-rails" #Sprockets (what Rails 3.1 uses for its asset pipeline) supports LESS
 #gem "twitter-bootstrap-rails"
+
 gem 'jquery-rails'
 gem 'turbolinks'
 gem 'jbuilder', '~> 1.2'# Build JSON APIs with ease. Read more: https://github.com/rails/jbuilder
-gem 'rails', '4.0.2'
+gem 'rails', '4.0.3'
 gem 'bcrypt-ruby', '~> 3.1.2'# Use ActiveModel has_secure_password
 gem 'unicorn'# Use unicorn as the app server
 gem 'thin'
@@ -43,6 +43,11 @@ group :assets do
   gem 'sass-rails', '~> 4.0.0'
   gem 'uglifier', '>= 1.3.0'
   gem 'coffee-rails', '~> 4.0.0'
+end
+
+group :production do
+  gem 'pg'
+  gem 'rails_12factor'
 end
 
 group :doc do

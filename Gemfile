@@ -8,6 +8,7 @@ gem 'therubyracer', platforms: :ruby  # See https://github.com/sstephenson/execj
 gem "less-rails" #Sprockets (what Rails 3.1 uses for its asset pipeline) supports LESS
 #gem "twitter-bootstrap-rails"
 
+gem 'pg'
 gem 'jquery-rails'
 gem 'turbolinks'
 gem 'jbuilder', '~> 1.2'# Build JSON APIs with ease. Read more: https://github.com/rails/jbuilder
@@ -46,7 +47,6 @@ group :assets do
 end
 
 group :production do
-  gem 'pg'
   gem 'rails_12factor'
 end
 
